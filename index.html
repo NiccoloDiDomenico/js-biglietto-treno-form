@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boolean Trainline</title>
+    <title>Train calculator</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- bootstrap -->
@@ -15,21 +15,127 @@
 <body>
 
     <!-- milestone1 -->
-    <form action="" id="ticket-form">
-        <!-- Input km -->
+    <!-- <form action="" id="ticket-form">
+        Input km
         <label for="user-km">Km da percorrere</label>
         <input type="number" id="user-km" name="user-km">
-        <!-- Input km -->
+        Input km
          <label for="user-age">Fascia d'età</label>
         <select name="user-age" id="user-age">
             <option value="ragazzo">Ragazzo</option>
             <option value="adulto">Adulto</option>
             <option value="anziano">Anziano</option>
         </select>
-        <!-- Submit button -->
+        Submit button
         <button id="generates-btn" type="submit">Invia</button>
-    </form>
+    </form> -->
     <!-- /milestone1 -->
+
+    <!-- milestone2 -->
+    <!-- header -->
+     <header>
+        <nav class="navbar bg-primary-subtle">
+            <div class="container">
+              <a class="navbar-brand fs-3" href="#">
+                TRAIN CALCULATOR
+              </a>
+            </div>
+          </nav>
+     </header>
+    <!-- /header -->
+
+    <!-- main -->
+    <main>
+
+        <!-- calculator section -->
+        <section class="bg-primary py-4">
+            <h2 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <div class="container bg-light mt-4">
+                <!-- form -->
+                <form action="" id="ticket-form" class="row">
+                    <!-- Input name -->
+                    <div class="col-md-4 my-3">
+                        <label for="user-name" class="form-label">
+                            Nome e cognome
+                        </label>
+                        <input type="text" id="user-name" class="form-control" name="user-name" required
+                            autocomplete="off">
+                    </div>
+                    <!-- Input km -->
+                    <div class="col-md-4 my-3">
+                        <label for="user-km" class="form-label">
+                            Km da percorrere
+                        </label>
+                        <input type="number" id="user-km" class="form-control" name="user-km" required
+                            autocomplete="off">
+                    </div>
+                    <!-- Input age -->
+                    <div class="col-md-4 my-3">
+                        <label for="user-age" class="form-label">
+                            Fascia d'età
+                        </label>
+                        <select name="user-age" id="user-age" class="form-select">
+                            <option value="ragazzo">Ragazzo</option>
+                            <option value="adulto">Adulto</option>
+                            <option value="anziano">Anziano</option>
+                        </select>
+                    </div>
+                    <!-- button -->
+                    <div class="my-3 text-center">
+                        <button id="generates-btn" type="submit" class="btn btn-primary">Genera</button>
+                        <button id="reset" type="reset" class="btn btn-primary">Annulla</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- /calculator section -->
+
+        <!-- Ticket section -->
+        <section id="ticket-section" class="bg-primary py-3 d-none">
+            <h2 class="text-center">IL TUO BIGLIETTO</h2>
+            <div class="container bg-light mt-4">
+                <div class="row py-3">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Dati passegero</h5>
+                                <p id="card1"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Costo biglietto</h5>
+                                <p id="card2"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Sconto applicabile</h5>
+                                <p id="card3"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Costo scontato</h5>
+                                <p id="card4"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Ticket section -->
+
+    </main>
+    <!-- /main -->
+    <!-- /milestone2 -->
+
 
     <script src="./js/script.js"></script>
 </body>
